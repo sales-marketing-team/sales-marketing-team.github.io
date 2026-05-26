@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+  <title>Inquiry Form - impressAD</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta data-n-head="ssr" data-hid="description" name="description" content="Impress Media Guide Inquiry Form">
+  <meta data-n-head="ssr" data-hid="og:site_name" property="og:site_name" content="impressAD">
+  <meta data-n-head="ssr" data-hid="og:type" property="og:type" content="website">
+  <meta data-n-head="ssr" data-hid="og:title" property="og:title" content="impressAD">
+  
+  <link rel="icon" type="image/x-icon" href="https://inquiry.impress.co.jp/favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://inquiry.impress.co.jp/css/ad-impress-co-jp.css">
+  
+  <script>
+    // Translated choices for JavaScript injection
+    var choices = {
+      'ipw': "Impress Watch", 'pcw': "PC Watch", 'ah': "AKIBA PC Hotline!", 'avw': "AV Watch",
+      'dcw': "Digital Camera Watch", 'kdw': "Smart Appliance Watch", 'ktw': "Mobile Watch", 'wf': "Madonomori (Forest of Windows)",
+      'iw': "INTERNET Watch", 'clw': "Cloud Watch", 'gmw': "GAME Watch", 'hbw': "HOBBY Watch",
+      'mgw': "MANGA Watch", 'car': "Car Watch", 'trw': "Travel Watch", 'gourmet': "Gourmet Watch",
+      'video': "Watch Video", 'kodomo': "Kodomo & IT", 'sng': "Senior Guide", 'ntp': "Netatopi",
+      'dekiru': "Dekiru Net", 'dosv': "DOS/V POWER REPORT", 'dcm': "Digital Camera Magazine", 'ganref': "GANREF",
+      'itl': "IT Leaders", 'thinkit': "Think IT", 'cdc': "Cloud & Data Center Complete Guide",
+      'webtan': "Web Tan Forum", 'netshop': "Net Shoptan Forum", 'sgforum': "SmartGrid Newsletter",
+      'dx': "DIGITAL X", 'drone': "Drone Journal", 'ibl': "Impress Business Library",
+      'ai': "AI Business Informatics", 'cae': "CAE Forum", 'cnd': "Cloud Native Days",
+      'dxd': "DIGITAL X DAY", 'em': "Executive Meeting", 'itlf': "IT Leaders Forum",
+      'wtfm': "Web Tan Forum Meeting", 'as': "Analytics Summit", 'asf': "Automotive Software Frontier",
+      'auc': "Automotive Functional Safety Conference", 'issc': "Critical Infrastructure Cybersecurity Conference",
+      'dif': "Data Center Innovation Forum", 'dmc': "Data Management Consortium",
+      'dms': "Digital Marketers Summit", 'ntff': "Net Shoptan Forum (Event)", 'pmc': "Process Mining Conference",
+      'origdekiru': "About Custom 'Dekiru' Book Production", 'manual': "About Manual Production",
+      'paper': "About Booklet/Whitepaper/Pamphlet Production", 'book': "About Custom Book Publishing",
+      'site': "About Website/Video/E-book Production", 'contents': "About Content Production for In-house Media",
+      'aiw': "AI Watch"
+    };
+    $(function() {
+      var media = (location.search.match(/[?&]media=([^&]+)/) || [])[1];
+      media = media ? decodeURIComponent(media.replace(/\+/g, ' ')) : '';
+      $.each(choices, function(k, label){
+        if (media === k){
+          $("input[type='checkbox'][value='" + label + "']").prop('checked', true);
+        }
+      });
+    });
+  </script>
+  <script>
+    $(function(){
+      $('ul.step > li:nth-of-type(1)').attr('class', 'active');
+      $('form ul:last').addClass('agree');
+    });
+  </script>
+  <style>
+    ul.header_menu { margin:0; }
+    /* Additional tweak to ensure the blue bar looks identical to the screenshot */
+    .heading.primary {
+      border-left: 5px solid #004098 !important;
+      padding-left: 15px !important;
+      font-size: 24px !important;
+      color: #000000 !important;
+    }
+    .form_item_label { font-weight: bold; }
+    
+    /* 1. 元々の外部CSSにある「空っぽの赤い四角」の設定を一旦綺麗に消します */
+    .required {
+      background: none !important;
+      border: none !important;
+      padding: 0 !important;
+      display: inline !important;
+      width: auto !important;
+      height: auto !important;
+    }
+    
+    /* 2. 新しく文字入りの綺麗な赤い四角を1つだけ作ります */
+    .required::after {
+      content: "Required" !important;
+      background-color: #de350b !important;
+      color: #ffffff !important;
+      font-size: 11px !important;
+      font-weight: bold !important;
+      padding: 3px 6px !important;
+      margin-left: 8px;
+      display: inline-block !important;
+      vertical-align: middle;
+      line-height: 1.2;
+      border-radius: 3px;
+    }
+    .attention .required::after {
+      margin-left: 4px;
+      margin-right: 4px;
+    }
+  </style>
+</head>
+<body>
+    <div id="__nuxt">
+      <div id="__layout">
+        <header class="header">
+          <a href="https://ad.impress.co.jp/" class="logo">Impress Media Guide</a>
+          <div class="header_nav">
+            <ul class="header_menu">
+              <li><a href="#">Download Materials</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+            <nav class="header_nav_list">
+              <ul>
+                <li class="dropdown">
+                  <span>Advertise with Us</span>
+                  <ul>
+                    <li><a href="#">Advertise on Consumer Media</a></li>
+                    <li><a href="#">Advertise on Business Media</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Create Custom Content</a></li>
+                <li><a href="#">Promote Events</a></li>
+                <li><a href="#">Lead Generation</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="humberger"><span></span><span></span><span></span></div>
+        </header>
+        <div class="wrapper">
+          <div class="container">
+            <div id="category_body">
+                            <h1 id="03_form" class="heading primary">Impress Media Guide Inquiry</h1>
+                            <p class="message">
+                <ul class="step">
+                  <li><span class="bubble"></span>Input</li>
+                  <li><span class="bubble"></span>Confirm</li>
+                  <li><span class="bubble"></span>Complete</li>
+                </ul>
+              </p>
+                            <form action="#" name="contact_register" method="POST" enctype="multipart/form-data" onsubmit="event.preventDefault(); alert('Form confirmation screen (Mock)');">
+                <div class="form_area form">
+                  <p class="attention" style='margin-bottom: 15px'>Fields marked with <span class="required"></span> are required.</p>
+                                    <div class="form_item">
+                    <label class="form_item_label">Full Name<span class="required"></span></label>
+                    <div class='kakunin form_item_text'>
+                      <input type='text' name='name_mock' required value='' class='form_item_input' placeholder="John Smith">
+                    </div>
+                  </div>
+                                    <div class="form_item">
+                    <label class="form_item_label">Company / Organization<span class="required"></span></label>
+                    <div class='kakunin form_item_text'>
+                      <div class='mt-0'>
+                        <label class='form-check-label no-decorate radio-label col' style="margin-right:15px;">
+                          <input type='radio' name='select_company' value='company' checked> Affiliated with a company/organization
+                        </label>
+                        <label class='form-check-label no-decorate radio-label col'>
+                          <input type='radio' name='select_company' value='free'> Freelance / Independent
+                        </label>
+                      </div>
+                      <div class='mt-2'>
+                        <input type='text' name='company_mock' required class='form_item_input' placeholder="Company Name, Inc." style="margin-top:10px;">
+                      </div>
+                    </div>
+                  </div>
+                                    <div class="form_item">
+                    <label class="form_item_label">Business Email Address<span class="required"></span></label>
+                    <div class='kakunin form_item_text'>
+                      <input type='email' name='email_mock' required pattern='^[a-zA-Z0-9_.+-]+[@][a-zA-Z0-9.-]+$' value='' class='form_item_input' placeholder="example@company.com">
+                    </div>
+                  </div>
+                                    <div id='js_inquiry_types_258'></div>
+                  <div id='js_inquiry_media_258'></div>
+                                    <script type="text/javascript">
+                    // Translated dynamic categories
+                    var parentItems258 = [
+                      {"id":"7832","name":"Advertising on Consumer Media","is_target":true},
+                      {"id":"7854","name":"Advertising on Business Media","is_target":true},
+                      {"id":"7864","name":"Event Promotion / Audience Attraction","is_target":false},
+                      {"id":"7866","name":"Event Sponsorship","is_target":false},
+                      {"id":"7868","name":"Lead Generation","is_target":false},
+                      {"id":"7870","name":"Content Creation & Custom Publishing","is_target":false},
+                      {"id":"7872","name":"Other","is_target":false}
+                    ];
+                                        var mediaChildren258 = [
+                      {"id":"7833","name":"Impress Watch","parent_id":"7832"},
+                      {"id":"7834","name":"AKIBA PC Hotline!","parent_id":"7832"},
+                      {"id":"7835","name":"Madonomori (Forest of Windows)","parent_id":"7832"},
+                      {"id":"7836","name":"Digital Camera Watch","parent_id":"7832"},
+                      {"id":"7837","name":"Mobile Watch","parent_id":"7832"},
+                      {"id":"7838","name":"Travel Watch","parent_id":"7832"},
+                      {"id":"7839","name":"HOBBY Watch","parent_id":"7832"},
+                      {"id":"7840","name":"MANGA Watch","parent_id":"7832"},
+                      {"id":"7841","name":"AI Watch","parent_id":"7832"},
+                      {"id":"7842","name":"GANREF","parent_id":"7832"},
+                      {"id":"7843","name":"Digital Camera Magazine","parent_id":"7832"},
+                      {"id":"7844","name":"Car Watch","parent_id":"7832"},
+                      {"id":"7845","name":"PC Watch","parent_id":"7832"},
+                      {"id":"7846","name":"AV Watch","parent_id":"7832"},
+                      {"id":"7847","name":"INTERNET Watch","parent_id":"7832"},
+                      {"id":"7848","name":"Smart Appliance Watch","parent_id":"7832"},
+                      {"id":"7849","name":"GAME Watch","parent_id":"7832"},
+                      {"id":"7850","name":"Kodomo & IT","parent_id":"7832"},
+                      {"id":"7851","name":"Gourmet Watch","parent_id":"7832"},
+                      {"id":"7852","name":"Watch Video","parent_id":"7832"},
+                      {"id":"7853","name":"Dekiru Net","parent_id":"7832"},
+                      {"id":"7855","name":"IT Leaders","parent_id":"7854"},
+                      {"id":"7856","name":"Think IT","parent_id":"7854"},
+                      {"id":"7857","name":"Cloud & Data Center Complete Guide","parent_id":"7854"},
+                      {"id":"7858","name":"Cloud Watch","parent_id":"7854"},
+                      {"id":"7859","name":"Web Tan Forum","parent_id":"7854"},
+                      {"id":"7860","name":"Net Shoptan Forum","parent_id":"7854"},
+                      {"id":"7861","name":"SmartGrid Forum","parent_id":"7854"},
+                      {"id":"7862","name":"DIGITAL X","parent_id":"7854"},
+                      {"id":"7863","name":"Drone Journal","parent_id":"7854"}
+                    ];
+                                        var selectedParents258 = [];
+                    var selectedChildren258 = [];
+                                        function renderInquiryTypes258() {
+                        var html = '';
+                        html += '<div class="form_item" id="parent_item_258" style="margin-bottom:20px;">';
+                        html += '<label class="form_item_label">Inquiry Type<span class="required"></span></label>';
+                        html += '<ul id="hier_258" style="text-align:left;margin:0" class="form_checkbox">';
+                        parentItems258.forEach(function(parent) {
+                            var checked = selectedParents258.includes(parent.id) ? ' checked' : '';
+                            html += '<li><label><input type="checkbox" value="'+parent.id+'" class="form_checkbox_input parent_cb_258"'+checked+'><span class="form_checkbox_parts">'+parent.name+'</span></label></li>';
+                        });
+                        html += '</ul>';
+                        html += '</div>';
+                        document.getElementById('js_inquiry_types_258').innerHTML = html;
+                    }
+                                        function renderInquiryMedia258() {
+                        var show = false;
+                        var showParentIds = parentItems258.filter(function(p){return p.is_target;}).map(function(p){return p.id;});
+                        var checkedIds = selectedParents258.filter(function(pid){return showParentIds.includes(pid);});
+                        if(checkedIds.length > 0) show = true;
+                        var style = show ? '' : ' style="display:none;"';
+                        var html = '';
+                        html += '<div class="form_item children-fields258" id="children_admedia_258"'+style+'>';
+                        html += '<label class="form_item_label">Target Media / Platform<span class="required"></span></label>';
+                        html += '<div class="kakunin form_item_text hier-multi-checkbox-wrap form_checkbox">';
+                        showParentIds.forEach(function(pid){
+                            mediaChildren258.forEach(function(child){
+                                if(child.parent_id == pid){
+                                    var checked = selectedChildren258.includes(child.id) ? ' checked' : '';
+                                    var showChild = checkedIds.includes(pid) ? '' : ' style="display:none;"';
+                                    html += '<label data-parent="'+pid+'"'+showChild+' style="margin-right: 16px;"><input type="checkbox" value="'+child.id+'" class="form_checkbox_input media_cb_258"'+checked+'><span class="form_checkbox_parts">'+child.name+'</span></label>';
+                                }
+                            });
+                        });
+                        html += '</div></div>';
+                        document.getElementById('js_inquiry_media_258').innerHTML = html;
+                    }
+                                        function updateInquiryMedia258() {
+                        selectedParents258 = [];
+                        document.querySelectorAll('.parent_cb_258').forEach(function(cb){ if(cb.checked) selectedParents258.push(cb.value); });
+                        selectedChildren258 = [];
+                        document.querySelectorAll('.media_cb_258').forEach(function(cb){ if(cb.checked) selectedChildren258.push(cb.value); });
+                                                renderInquiryMedia258();
+                        var showParentIds = parentItems258.filter(function(p){return p.is_target;}).map(function(p){return p.id;});
+                        var checkedIds = selectedParents258.filter(function(pid){return showParentIds.includes(pid);});
+                        document.querySelectorAll('#js_inquiry_media_258 label[data-parent]').forEach(function(lbl){
+                            var pid = lbl.getAttribute('data-parent');
+                            if(checkedIds.includes(pid)){ lbl.style.display = ''; }else{ lbl.style.display = 'none'; lbl.querySelector('input').checked = false; }
+                        });
+                        var mediaDiv = document.getElementById('children_admedia_258');
+                        if(mediaDiv){ mediaDiv.style.display = checkedIds.length > 0 ? '' : 'none'; }
+                    }
+                                        renderInquiryTypes258();
+                    renderInquiryMedia258();
+                    document.addEventListener('change', function(e){
+                        if(e.target.classList.contains('parent_cb_258') || e.target.classList.contains('media_cb_258')){ updateInquiryMedia258(); }
+                    });
+                  </script>
+                                    <style>
+                    #js_inquiry_types_258 .form_item, #js_inquiry_media_258 .form_item {margin-bottom: 20px;}
+                    #js_inquiry_media_258 .form_item_label {margin-bottom: 5px;}
+                    .hier-multi-checkbox-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
+                    .hier-multi-checkbox-wrap label { margin-bottom: 0; }
+                  </style>
+                  <div class="form_item">
+                    <label class="form_item_label">Purpose of Inquiry<span class="required"></span></label>
+                    <div class='kakunin form_item_text'>
+                      <ul class='form_checkbox'>
+                        <li><label><input type='checkbox' name='purpose[]' value='1' class='form_checkbox_input'><span class='form_checkbox_parts'>Considering for in-house promotion</span></label></li>
+                        <li><label><input type='checkbox' name='purpose[]' value='2' class='form_checkbox_input'><span class='form_checkbox_parts'>Proposing to a client / third party</span></label></li>
+                        <li><label><input type='checkbox' name='purpose[]' value='3' class='form_checkbox_input'><span class='form_checkbox_parts'>General information gathering</span></label></li>
+                        <li><label><input type='checkbox' name='purpose[]' value='4' class='form_checkbox_input'><span class='form_checkbox_parts'>Other</span></label></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="form_item">
+                    <label class="form_item_label">Inquiry Details / Specific Requests<span class="required"></span></label>
+                    <div class='kakunin form_item_text'>
+                      <div style="margin-bottom: 8px; color: #666; font-size: 13px;">
+                        Please provide details regarding your target audience, campaign goals, or specific media of interest. Agencies are kindly requested to include the client's company name if possible.
+                      </div>
+                      <textarea name='details_mock' required class='form_item_textarea' style="height:150px;"></textarea>
+                    </div>
+                  </div>
+                  <div class="form_item">
+                    <label class="form_item_label">Handling of Personal Information<span class="required"></span></label>
+                    <div class='kakunin form_item_text'>
+                      <div style="font-size: 13px; color: #444; line-height: 1.6; border: 1px solid #ddd; padding: 15px; background: #fafafa; border-radius: 4px; max-height: 200px; overflow-y: auto;">
+                        Impress Corporation (hereinafter referred to as "the Company") will utilize the personal information provided for the following purposes. Within the scope necessary to achieve these purposes, we may contact or guide you via email, telephone, or other means.<br><br>
+                        <ul>
+                          <li>To handle inquiries and communications regarding advertising placements on our media platforms.</li>
+                          <li>To provide information, advertisements, and guidance regarding products, services, and events offered by the Company or our clients/advertisers.</li>
+                          <li>To request cooperation for surveys/questionnaires and to notify you of their results.</li>
+                          <li>To generate anonymized statistical data to improve existing services or develop new businesses and products.</li>
+                        </ul>
+                        The Company handles personal information in accordance with this notice and our official Privacy Policy (<a href='https://www.impress.co.jp/privacy.html' target="_blank">https://www.impress.co.jp/privacy.html</a>).<br><br>
+                        Do you agree to the terms above?
+                      </div>
+                      <ul class='form_checkbox' style="margin-top: 10px;">
+                        <li><label><input type='checkbox' required name='privacy' value='agree' class='form_checkbox_input'><span class='form_checkbox_parts'>I agree</span></label></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="button-field form_btn">
+                    <div class="form_btn_clear">
+                      <button type="button" id="reset-form" name="reset-form" class="btn">Reset</button>
+                    </div>
+                    <div class="form_btn_confirm">
+                      <input type="submit" value="  Confirm  " name="confirm" id="send-form">
+                    </div>
+                  </div>
+                  
+                  <script type="text/javascript">
+                    $(function() {
+                      $('#reset-form').bind('click', function(){
+                        $(this.form).find("textarea, :text, select, input[type=email]").val("").end().find(":checked").prop("checked", false);
+                      });
+                    });
+                  </script>
+                                  </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class="footer_nav">
+            <ul>
+              <li><a href="#">TOP</a></li>
+              <li><a href="https://www.impress.co.jp/sitepolicy.html" target="_blank">Terms of Use</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="https://www.impress.co.jp/privacy.html" target="_blank">Privacy Policy</a></li>
+              <li><a href="https://www.impress.co.jp/corporate.html" target="_blank">Corporate Profile</a></li>
+              <li><a href="https://www.impressholdings.com/" target="_blank">Impress Group</a></li>
+            </ul>
+          </div>
+          <small>Copyright ©2026 Impress Corporation. All rights reserved.</small>
+        </footer>
+        <div class="overlay"></div>
+      </div>
+    </div>
+</body>
+</html>
