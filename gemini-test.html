@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>[Test] Advertising & Partnership Inquiry - Impress</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    /* --- Official Impress Outer Frame Theme (English Ver.) --- */
+    :root {
+      --impress-blue: #004098; /* Official Impress Brand Color */
+      --impress-dark: #333333;
+      --bg-gray: #f4f6f9;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg-gray);
+      margin: 0;
+      padding: 0;
+      color: #1a1a1a;
+    }
+
+    /* Header */
+    .impress-header {
+      background: #ffffff;
+      border-bottom: 3px solid var(--impress-blue);
+      padding: 15px 40px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .impress-logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: var(--impress-blue);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .impress-logo span {
+      background: var(--impress-blue);
+      color: #fff;
+      padding: 2px 6px;
+      margin-right: 5px;
+      font-size: 18px;
+      border-radius: 3px;
+    }
+
+    .header-title {
+      margin-left: 15px;
+      padding-left: 15px;
+      border-left: 1px solid #ccc;
+      color: #666;
+      font-size: 14px;
+    }
+
+    /* Main Container Wrapper */
+    .main-wrapper {
+      padding: 40px 20px;
+    }
+
+    /* --- Form Content Styles --- */
+    .container {
+      max-width: 860px;
+      margin: auto;
+      background: #ffffff;
+      padding: 40px 50px;
+      border-radius: 8px; 
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+
+    h1 {
+      font-size: 26px;
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: var(--impress-dark);
+    }
+
+    .subtitle {
+      color: #666;
+      margin-bottom: 30px;
+      font-size: 15px;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-top: 40px;
+      margin-bottom: 15px;
+      color: var(--impress-blue); 
+      border-left: 4px solid var(--impress-blue);
+      padding-left: 10px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+      margin-top: 18px;
+      font-size: 14px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      transition: 0.2s;
+      background: #fafafa;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--impress-blue);
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(0, 64, 152, 0.1);
+      background: #ffffff;
+    }
+
+    textarea {
+      min-height: 120px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .full {
+      grid-column: 1 / -1;
+    }
+
+    .checkbox {
+      margin-top: 20px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .checkbox input {
+      width: auto;
+      margin-right: 10px;
+      margin-top: 4px;
+    }
+    
+    .checkbox label {
+      margin: 0;
+      font-weight: normal;
+    }
+
+    .submit-btn {
+      margin-top: 30px;
+      width: 100%;
+      padding: 14px;
+      background: var(--impress-blue); 
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .submit-btn:hover {
+      background: #002d6b;
+    }
+
+    /* Footer */
+    .impress-footer {
+      background: #333;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 13px;
+      margin-top: 60px;
+    }
+
+    .impress-footer a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .impress-footer a:hover {
+      text-decoration: underline;
+    }
+
+    .copyright {
+      margin-top: 15px;
+      color: #999;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      .container {
+        padding: 25px 20px;
+      }
+      .impress-header {
+        padding: 15px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="impress-header">
+    <div class="impress-logo"><span>i</span>impress</div>
+    <div class="header-title">Impress Inquiry System (Test Screen)</div>
+  </header>
+
+  <div class="main-wrapper">
+    <div class="container">
+      <h1>Advertising & Partnership Inquiry</h1>
+      <div class="subtitle">
+        Unlock data-driven marketing opportunities with Impress Media
+      </div>
+
+      <form onsubmit="event.preventDefault(); alert('Test inquiry submitted successfully!');">
+
+        <h2>Contact Information</h2>
+        <div class="grid">
+          <div>
+            <label>Full Name *</label>
+            <input type="text" required>
+          </div>
+          <div>
+            <label>Company / Organization *</label>
+            <input type="text" required>
+          </div>
+          <div>
+            <label>Job Title</label>
+            <input type="text">
+          </div>
+          <div>
+            <label>Business Email *</label>
+            <input type="email" required>
+          </div>
+          <div class="full">
+            <label>Phone Number</label>
+            <input type="tel">
+          </div>
+        </div>
+
+        <h2>Business Objective</h2>
+        <label>What best describes your objective? *</label>
+        <select required>
+          <option value="">Select one</option>
+          <option>Launch a new campaign</option>
+          <option>Lead generation</option>
+          <option>Brand awareness</option>
+          <option>Event promotion</option>
+          <option>Content marketing</option>
+          <option>Market research</option>
+          <option>Other</option>
+        </select>
+
+        <h2>Project Overview</h2>
+        <div class="grid">
+          <div>
+            <label>Target Audience</label>
+            <input type="text" placeholder="Industry / Role / Region">
+          </div>
+          <div>
+            <label>Budget Range</label>
+            <select>
+              <option>Select</option>
+              <option>Under $10K</option>
+              <option>$10K–50K</option>
+              <option>$50K+</option>
+            </select>
+          </div>
+          <div>
+            <label>Timeline</label>
+            <select>
+              <option>Select</option>
+              <option>Immediate</option>
+              <option>1–3 months</option>
+              <option>3–6 months</option>
+            </select>
+          </div>
+          <div>
+            <label>Channels of Interest</label>
+            <input type="text" placeholder="Display / Email / Event etc.">
+          </div>
+          <div class="full">
+            <label>Key Message / Value Proposition</label>
+            <textarea></textarea>
+          </div>
+        </div>
+
+        <h2>Additional Details</h2>
+        <textarea placeholder="Include KPIs, target companies, or specific requests"></textarea>
+
+        <div class="checkbox">
+          <input type="checkbox" required>
+          <label>
+            I agree to the processing of my personal data in accordance with the Privacy Policy.
+          </label>
+        </div>
+
+        <button class="submit-btn">Start the Conversation →</button>
+
+      </form>
+    </div>
+  </div>
+
+  <footer class="impress-footer">
+    <div class="footer-links">
+      <a href="#">Impress Corporate Site</a> | 
+      <a href="#">Privacy Policy</a> | 
+      <a href="#">Contact Us</a>
+    </div>
+    <div class="copyright">
+      Copyright © 2026 Impress Corporation. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
